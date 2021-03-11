@@ -4,7 +4,7 @@ data "aws_vpc" "vpc_prod" {
   tags = {
     Name = "VPC_PROD"
   }
- }
+}
 
 # PEGAR INFORMAÇÕES DAS SUBNETS DA AZ1
 data "aws_subnet" "prod_public_subnet_az1" {
@@ -12,7 +12,7 @@ data "aws_subnet" "prod_public_subnet_az1" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -26,7 +26,7 @@ data "aws_subnet" "prod_private_web_subnet_az1" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -40,7 +40,7 @@ data "aws_subnet" "prod_private_app_subnet_az1" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -54,7 +54,7 @@ data "aws_subnet" "prod_private_data_subnet_az1" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -70,7 +70,7 @@ data "aws_subnet" "prod_public_subnet_az2" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -84,7 +84,7 @@ data "aws_subnet" "prod_private_web_subnet_az2" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -98,7 +98,7 @@ data "aws_subnet" "prod_private_app_subnet_az2" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -112,7 +112,7 @@ data "aws_subnet" "prod_private_data_subnet_az2" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -128,7 +128,7 @@ data "aws_subnet" "prod_public_subnet_az3" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -142,7 +142,7 @@ data "aws_subnet" "prod_private_web_subnet_az3" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -156,7 +156,7 @@ data "aws_subnet" "prod_private_app_subnet_az3" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -170,7 +170,7 @@ data "aws_subnet" "prod_private_data_subnet_az3" {
 
   tags = {
     Ambiente = "Prod"
-    Vpc = "VPC_PROD"
+    Vpc      = "VPC_PROD"
   }
 
   filter {
@@ -182,7 +182,7 @@ data "aws_subnet" "prod_private_data_subnet_az3" {
 
 ## PEGAR INFORMAÇÕES DO INTERNET GATEWAY
 data "aws_internet_gateway" "internet_gateway_vpc_prod" {
-  
+
   tags = {
     Vpc = "VPC_PROD"
   }
